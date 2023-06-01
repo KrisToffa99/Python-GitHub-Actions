@@ -50,5 +50,6 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         push: true
-        tags: kriztoffa/python-github-actions:latest
+        tags: user/app:latest
+        image: kriztoffa/python-github-actions
 
