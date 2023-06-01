@@ -39,3 +39,12 @@ jobs:
         pip install pytest
         export PYTHONPATH=src
         pytest
+
+    - name: Build & push Docker image
+      uses: mr-smithers-excellent/docker-build-push@v5
+      with:
+        image: kriztoffa/python-github-actions
+        registry: docker.io
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
+
